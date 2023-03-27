@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .f_sec{
+        background-color: #F3E9DE;
+        min-width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    .title_img {
+        width: 80%;
+        height: 80%;
+        opacity: 1;
+    }
+    .sec_title {
+        background-color:#AB6D5F ;
+        display: flex;
+        height: 400px;
+        justify-content: right;
+        align-items: center;
+        padding-left: 20%;
+    }
+    .h_title {
+       font-size:45px;
+font-weight:bold;
+       opacity: 0;
+       color: white;
+    }
+    .thi-sec{
+        display: flex;
+        color: white;
+        background-color:#AB6D5F ;
+    }
+    .thi_left {
+        width: 40%;
+        opacity: 0;
+    }
+    .thi_right {
+        width: 50%;
+        padding:100px 40px;
+        font-size: 35px;
+        opacity: 0;
+    }
+    .para_cont {
+        background-image: url('https://cdn.shopify.com/s/files/1/0667/8318/3163/files/new_component.png?v=1676636510');
+        height: 500px;
+        color: #AB6D5F;
+    }
+    .left-content{
+        width: 260px;
+        font-weight: bold;
+    }
+    .right-content{
+        width: 300px;
+        /* font-weight: bold; */
+    }
+    .sub-container {
+        display: flex; padding-top:100px; justify-content: center; align-content: center;
+        width: 80%;
+        opacity: 0;
+    column-gap: 10rem;
+    }
+</style>
+<body>
+    <div class="f_sec">
+        <img src="https://cdn.shopify.com/s/files/1/0667/8318/3163/files/Component-45-_-1.svg?v=1679642260" alt="" class="title_img">
+    </div>
+    <div class="sec_title">
+        <p class="h_title">MAE believes that mindful use of resources can help us combat climate crisis and </p>
+    </div>
+    <div class="thi-sec">
+        <div class="thi_left">
+                <img src="https://cdn.shopify.com/s/files/1/0667/8318/3163/files/heavenly_haze_copy_11.png?v=1676636422" alt="" style="width: 80%;">
+        </div>
+        <div class="thi_right">
+            <p>We are actively researching ways to help the planet by reducing waste and moulding them into a viable use.</p>
+            <p>This not only rejuvenates the planet by reducing the consumption of natural resources, but also helps in cleaning up.</p>
+            <p>We are actively researching ways to prevent deposit of agricultural residue in landfills, and moulding them into a viable use; eradicating an established problem for farmers.</p> 
+<p>
+                Simultaneously, this helps us achieve Carbon Neutrality by capturing CO2 absorbed by plants into physical products, which would have otherwise released back in the environment.</p>
+    </div>
+    </div>
+    <div class="para_cont">
+        <div style="display: flex; padding-top:30px; justify-content: center; align-content: center; column-gap: 10rem;" class="top_para">
+      
+            <div class="sub-container">
+                <div style="margin-left: 20%;" class="left-content"><p>Every year around 500 millions tons of crop resudue is geneated in  india</p>
+                    <p style="margin-top: 100px;" class="left-content">The abundance of agricultural waste present a serious ecological  problem owning to the release of  carbon dioxide, long-lasting smoke and methane produced from its  combustion</p> </div>
+
+                    <div class="right-content"><p>By reshaping these natural fibers into evrydat essentials. we given them a new life  of cater to prevealing problem. 
+                        <br><br>
+                        Keeping resourcing in the loop for longer while also sequesting caarbon in the process.<br><br> Moreover, we are in  constant pursuit to futher explore natural and earthen elements to bring you a range of ouient  products. mindfully and aesthetically designed to have a carbon neutral approach. 
+                        
+                                </p> </div>
+            </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+     gsap.registerPlugin(ScrollTrigger);
+     
+     gsap.to(".f_sec" ,   {
+        scrollTrigger: {
+                trigger:".f_sec", 
+                markers:true,
+                start: "300px top",
+                end:"400px 62%",
+                toggleActions:"restart  reverse"
+        },
+        // scale:2, 
+        background:"#AB6D5F",
+        duration:0.1
+        });
+        gsap.to(".title_img" ,   {
+        scrollTrigger: {
+                trigger:".f_sec", 
+                markers:true,
+                start: "300px top",
+                end:"400px 62%",
+                toggleActions:"restart  reverse"
+        },
+        scale:0.5, 
+        background:"#AB6D5F",
+        y:-150
+                });
+
+        gsap.to(".h_title",   {
+        scrollTrigger: {
+                trigger:".sec_title", 
+                markers:true,
+                start: "10px center",
+                end:"300px 60%",
+                toggleActions:"restart reverse restart reverse"
+        },
+        opacity:1, 
+        y:-100,
+        duration:0.5
+        });
+
+        
+        gsap.to(".thi_left",   {
+        scrollTrigger: {
+                trigger:".thi-sec", 
+                markers:true,
+                start: "-60px center",
+                end:"500px 60%",
+                toggleActions:"restart reverse restart reverse"
+        },
+        opacity:1, 
+        y:-100,
+        duration:1
+        });
+
+        gsap.to(".thi_right",   {
+        scrollTrigger: {
+                trigger:".thi-sec", 
+                markers:true,
+                start: "-60px center",
+                end:"500px 20%",
+                toggleActions:"restart reverse restart reverse"
+        },
+        opacity:1, 
+        y:-100,
+        duration:0.6
+        });
+
+        gsap.to(".sub-container",   {
+        scrollTrigger: {
+                trigger:".sub-container", 
+                markers:true,
+                start: "-60px center",
+                end:"350px 20%",
+                toggleActions:"restart reverse restart reverse"
+        },
+        opacity:1, 
+        opacity:1,
+        y:-100,
+        duration:0.6
+        });
+</script>
+</html>
